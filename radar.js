@@ -3,14 +3,14 @@ function init(h, w) {
 
     var radar = new pv.Panel()
         .width(w)
-        .height(h)
+        .height(h + hOffset / 2)
         .canvas('radar')
 
 // arcs
     radar.add(pv.Dot)
         .data(radar_arcs)
         .left(w / 2)
-        .bottom(h / 2)
+        .bottom((h + hOffset) / 2)
         .radius(function (d) {
             return d.r;
         })
@@ -22,7 +22,7 @@ function init(h, w) {
 
 //quadrant lines -- vertical
     radar.add(pv.Line)
-        .data([(h / 2 - radar_arcs[radar_arcs.length - 1].r), h - (h / 2 - radar_arcs[radar_arcs.length - 1].r)])
+        .data([((h + hOffset) / 2 - radar_arcs[radar_arcs.length - 1].r), (h + hOffset) - ((h + hOffset) / 2 - radar_arcs[radar_arcs.length - 1].r)])
         .lineWidth(1)
         .left(w / 2)
         .bottom(function (d) {
@@ -34,7 +34,7 @@ function init(h, w) {
     radar.add(pv.Line)
         .data([(w / 2 - radar_arcs[radar_arcs.length - 1].r), w - (w / 2 - radar_arcs[radar_arcs.length - 1].r)])
         .lineWidth(1)
-        .bottom(h / 2)
+        .bottom((h + hOffset) / 2)
         .left(function (d) {
             return d;
         })
@@ -71,7 +71,7 @@ function init(h, w) {
 
 //Quadrant Ledgends
     var radar_quadrant_ctr = 1;
-    var quadrantFontSize = 18;
+    var quadrantFontSize = 15;
     var headingFontSize = 14;
     var stageHeadingCount = 0;
     var lastRadius = 0;

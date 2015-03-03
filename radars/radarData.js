@@ -76,11 +76,11 @@ var radar_data = [
         "color": "#587486",
         "items": [
             // Adopt
-            {name: 'Kibana', pc: {r: 80, t: 56}, movement: 'c'},
-            {name: 'Git', pc: {r: 60, t: 76}, movement: 'c'},
-            {name: 'HAProxy', pc: {r: 40, t: 46}, movement: 'c'},
+            {"name": 'Kibana', pc: {r: 80, t: 56}, movement: 'c'},
+            {"name": 'Git', pc: {r: 60, t: 76}, movement: 'c'},
+            {"name": 'HAProxy', pc: {r: 40, t: 46}, movement: 'c'},
             // Trial
-            {name: 'Liquibase', pc: {r: 130, t: 73}, movement: 'c'},
+            {"name": 'Liquibase', pc: {r: 130, t: 73}, movement: 'c'},
             // Assess
             {name: 'Docker', pc: {r: 280, t: 74}, movement: 'c'},
             {name: 'Kafka', pc: {r: 210, t: 31}, movement: 'c'},
